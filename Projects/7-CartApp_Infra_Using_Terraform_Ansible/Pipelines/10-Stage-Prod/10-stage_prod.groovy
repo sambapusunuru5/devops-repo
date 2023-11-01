@@ -175,6 +175,9 @@ pipeline {
                         params.deployToProd == 'yes'
                     }
                 }
+                allof {
+                    branch 'release/*'
+                }
             }
             steps {
               script {
